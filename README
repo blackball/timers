@@ -1,0 +1,6 @@
+timers
+---
+
+timer.h: timer for C (Linux/Window)
+timer.hpp: timer for C++ (Linus/Windows, needs C++11)
+

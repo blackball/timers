@@ -1,6 +1,13 @@
 #include "../timer.hpp"
 #include <stdio.h>
-#include <unistd.h>
+
+#ifdef _WIN32
+  #include <windows.h>
+  #define SLEEP(n) Sleep(n * 1000)
+#else
+  #include <unistd.h>
+  #define SLEEP(n) sleep(n)
+#endif 
 
 int
 main(int argc, char *argv[]) {

@@ -17,7 +17,7 @@ class ScopedTimer {
     std::chrono::high_resolution_clock::time_point _start    
 public:
     ScopedTimer() { _start = std::chrono::high_resolution_clock::now(); }
-    ~ScopedTimer(){ std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _start).count(); }
+    ~ScopedTimer(){ printf("elapsed(ms): %lf\n", std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - _start).count()); }
 };
 
 #endif /* CPP_TIMER_H */
